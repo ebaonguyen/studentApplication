@@ -1,4 +1,4 @@
-package org.cs157.util;
+package util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -22,4 +22,3 @@ public class DBConnection {
 }
 
 }
-

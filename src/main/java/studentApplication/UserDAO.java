@@ -1,4 +1,4 @@
-package org.cs157.studentApplication;
+package studentApplication;
 
 
 
@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import org.cs157.util.DBConnection;
+import util.DBConnection;
 
 public class UserDAO {
 

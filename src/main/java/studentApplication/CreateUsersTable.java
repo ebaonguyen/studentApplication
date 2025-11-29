@@ -1,9 +1,9 @@
-package org.cs157.studentApplication;
+package studentApplication;
 
 import java.sql.Connection;
 import java.sql.Statement;
 
-import org.cs157.util.DBConnection;
+import util.DBConnection;
 
 
 public class CreateUsersTable {

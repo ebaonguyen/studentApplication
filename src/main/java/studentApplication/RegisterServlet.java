@@ -1,4 +1,4 @@
-package org.cs157.studentApplication;
+package studentApplication;
 
 
 import java.io.IOException;
