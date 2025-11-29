@@ -1,0 +1,9 @@
+org\cs157\studentApplication\User.class
+org\cs157\studentApplication\CreateMessagesTable.class
+org\cs157\studentApplication\CreateUsersTable.class
+org\cs157\studentApplication\UserDAO.class
+org\cs157\studentApplication\CreateAcceptanceTable.class
+org\cs157\util\DBConnection.class
+org\cs157\studentApplication\RegisterServlet.class
+org\cs157\studentApplication\CreateCommentsTable.class
+org\cs157\studentApplication\CreatePostsTable.class
