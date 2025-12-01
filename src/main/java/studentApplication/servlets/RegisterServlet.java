@@ -21,7 +21,7 @@ public class RegisterServlet extends HttpServlet {
 
     /*
     * Handles GET requests to show the registration form.
-    * Forwards request to register.html page
+    * Forwards request to register.jsp page
     * @param req HttpServletRequest object that contains the request the client made
     * @param resp HttpServletResponse object that contains the response the servlet returns
     * @throws ServletException if a servlet-specific error occurs

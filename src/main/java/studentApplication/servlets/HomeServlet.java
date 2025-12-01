@@ -8,17 +8,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import studentApplication.daos.UserDAO;
 import studentApplication.classes.User;
 
 /*
-* Servlet that handles user registration. 
-* Mapped to the /register URL.
+* Servlet that handles home page. 
+* Mapped to the /home URL.
 */
 
 @WebServlet("/home")
 public class HomeServlet extends HttpServlet {
-    private final UserDAO userDAO = new UserDAO();
 
     /*
     * Handles GET requests to show the home page.

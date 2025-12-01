@@ -12,8 +12,8 @@ import studentApplication.daos.UserDAO;
 import studentApplication.classes.User;
 
 /*
-* Servlet that handles user registration. 
-* Mapped to the /register URL.
+* Servlet that handles user login. 
+* Mapped to the /login URL.
 */
 
 @WebServlet("/login")
@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 
     /*
     * Handles GET requests to show the login form.
-    * Forwards request to login.html page
+    * Forwards request to login.jsp page
     * @param req HttpServletRequest object that contains the request the client made
     * @param resp HttpServletResponse object that contains the response the servlet returns
     * @throws ServletException if a servlet-specific error occurs
@@ -36,9 +36,9 @@ public class LoginServlet extends HttpServlet {
 
 
     /*
-    * Handles POST requests to process the registration form submission.
-    * Creates a new user and attempts to register them using UserDAO.
-    * If registration is successful, redirects to main page; otherwise, redirects back to registration page.
+    * Handles POST requests to process the login form submission.
+    * Searches for an existing user with the specified email and password.
+    * If the user is found, redirects to main page; otherwise, redirects back to login page.
     * @param req HttpServletRequest object that contains the request the client made
     * @param resp HttpServletResponse object that contains the response the servlet returns
     * @throws ServletException if a servlet-specific error occurs

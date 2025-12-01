@@ -8,12 +8,10 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import studentApplication.daos.UserDAO;
-import studentApplication.classes.User;
 
 /*
-* Servlet that handles user registration. 
-* Mapped to the /register URL.
+* Servlet that handles logging out. 
+* Mapped to the /logout URL.
 */
 
 @WebServlet("/logout")
