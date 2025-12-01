@@ -8,9 +8,9 @@ import java.sql.SQLException;
 
 public class DBConnectionTest {
     
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/testkeyboardbuilderdb";
-    private static final String USER = "root";
-    private static final String PASS = "Loanvu2977!";
+    private static final String DB_URL = "";
+    private static final String USER = "";
+    private static final String PASS = "";
 
     public static Connection getConnection() throws SQLException {
     try {
