@@ -12,7 +12,7 @@ public class AcceptanceDAO {
         this.conn = conn;   
     }
     // INSERT
-    public void insertAcceptance(Date dateAccepted, int userId, int postId) {
+    public boolean insertAcceptance(Date dateAccepted, int userId, int postId) {
         String sql = "INSERT INTO Acceptance (date_accepted, user_id, post_id) VALUES (?, ?, ?)";
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -20,10 +20,11 @@ public class AcceptanceDAO {
             ps.setDate(1, dateAccepted);
             ps.setInt(2, userId);
             ps.setInt(3, postId);
-            ps.executeUpdate();
-
+            int rows = ps.executeUpdate();
+            return rows == 1;
         } catch (Exception e) {
             System.out.println("Error inserting Acceptance: " + e.getMessage());
+            return false;
         }
     }
 

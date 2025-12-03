@@ -64,10 +64,10 @@ public class CreatePostServlet extends HttpServlet {
         boolean success = postDAO.createPost(post, user);
 
         if (success) {
-            req.getRequestDispatcher("/home.jsp").forward(req, resp);
+            req.getRequestDispatcher("home").forward(req, resp);
         } else {
             System.out.println("POST CREATION FAILED");
-            resp.sendRedirect("createpost");
+            resp.sendRedirect("home?error=true");
         }
         
     }

@@ -40,6 +40,7 @@ CREATE TABLE Comments (
 );
 
 CREATE TABLE Messages (
+    message_id INT AUTO_INCREMENT PRIMARY KEY,
 	message VARCHAR(300),
     time_sent TIMESTAMP,
     sender_id INT NOT NULL,
