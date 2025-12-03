@@ -13,7 +13,7 @@ public class CommentDAO {
     }
 
     // INSERT
-    public void insertComment(String comment, Date dateCommented, int userId, int postId) {
+    public boolean insertComment(String comment, Date dateCommented, int userId, int postId) {
         String sql = "INSERT INTO Comments (comment, date_commented, user_id, post_id) VALUES (?, ?, ?, ?)";
 
         try (PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -22,10 +22,12 @@ public class CommentDAO {
             ps.setDate(2, dateCommented);
             ps.setInt(3, userId);
             ps.setInt(4, postId);
-            ps.executeUpdate();
+            int rows = ps.executeUpdate();
+            return rows == 1;
 
         } catch (Exception e) {
             System.out.println("Error inserting Comment: " + e.getMessage());
+            return false;
         }
     }
 

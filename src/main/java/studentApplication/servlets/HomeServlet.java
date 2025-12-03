@@ -31,7 +31,7 @@ public class HomeServlet extends HttpServlet {
         try {
             postDAO = new PostDAO(DBConnection.getConnection());
         } catch (SQLException e) {
-            throw new ServletException("Unable to initialize UserDAO", e);
+            throw new ServletException("Unable to initialize PostDAO", e);
         }
         
     }
