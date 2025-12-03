@@ -1,3 +1,4 @@
+C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\classes\Message.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\classes\Post.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\classes\User.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\createtables\CreateAcceptanceTable.java
@@ -5,10 +6,15 @@ C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\create
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\createtables\CreateMessagesTable.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\createtables\CreatePostsTable.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\createtables\CreateUsersTable.java
+C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\daos\AcceptanceDAO.java
+C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\daos\CommentDAO.java
+C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\daos\MessageDAO.java
+C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\daos\PostDAO.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\daos\UserDAO.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\servlets\CreatePostServlet.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\servlets\HomeServlet.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\servlets\LoginServlet.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\servlets\LogoutServlet.java
+C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\servlets\MessageServlet.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\studentApplication\servlets\RegisterServlet.java
 C:\Users\ericb\CS 157\studentApplication\src\main\java\util\DBConnection.java

@@ -2,13 +2,16 @@ package studentApplication.servlets;
 
 
 import java.io.IOException;
+import java.sql.SQLException;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import studentApplication.daos.UserDAO;
 import studentApplication.classes.User;
+import studentApplication.daos.UserDAO;
+import util.DBConnection;
 
 /*
 * Servlet that handles user registration. 
@@ -17,15 +20,23 @@ import studentApplication.classes.User;
 
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
-    private final UserDAO userDAO = new UserDAO();
+    private UserDAO userDAO;
+    /*
+    * Initializes the servlet and sets up the UserDAO instance.
+    */
+    @Override
+    public void init() throws ServletException{
+        try {
+            userDAO = new UserDAO(DBConnection.getConnection());
+        } catch (SQLException e) {
+            throw new ServletException("Unable to initialize UserDAO", e);
+        }
+        
+    }
 
     /*
     * Handles GET requests to show the registration form.
     * Forwards request to register.jsp page
-    * @param req HttpServletRequest object that contains the request the client made
-    * @param resp HttpServletResponse object that contains the response the servlet returns
-    * @throws ServletException if a servlet-specific error occurs
-    * @throws IOException if an I/O error occurs
     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -37,11 +48,7 @@ public class RegisterServlet extends HttpServlet {
     /*
     * Handles POST requests to process the registration form submission.
     * Creates a new user and attempts to register them using UserDAO.
-    * If registration is successful, redirects to main page; otherwise, redirects back to registration page.
-    * @param req HttpServletRequest object that contains the request the client made
-    * @param resp HttpServletResponse object that contains the response the servlet returns
-    * @throws ServletException if a servlet-specific error occurs
-    * @throws IOException if an I/O error occurs
+    * If registration is successful, redirects to main page; otherwise, redirects back to registration page
      */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -55,6 +62,10 @@ public class RegisterServlet extends HttpServlet {
         String password = req.getParameter("password");
         String major = req.getParameter("major");
         int school_year = Integer.parseInt(req.getParameter("school_year"));
+        if (school_year < 1 || school_year > 4) {
+            resp.sendRedirect("register?error=true");
+            return;
+        }
 
         User user = new User(first_name, last_name, email, username, password, major, school_year);
 

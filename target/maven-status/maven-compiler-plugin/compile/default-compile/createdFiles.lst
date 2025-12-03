@@ -4,10 +4,17 @@ studentApplication\classes\User.class
 studentApplication\createtables\CreatePostsTable.class
 studentApplication\createtables\CreateAcceptanceTable.class
 util\DBConnection.class
+studentApplication\servlets\MessageServlet.class
+studentApplication\classes\Message.class
 studentApplication\servlets\LoginServlet.class
 studentApplication\createtables\CreateUsersTable.class
+studentApplication\daos\CommentDAO.class
 studentApplication\classes\Post.class
+studentApplication\daos\PostDAO.class
+studentApplication\servlets\CreatePostServlet.class
+studentApplication\daos\AcceptanceDAO.class
 studentApplication\createtables\CreateCommentsTable.class
 studentApplication\servlets\LogoutServlet.class
+studentApplication\daos\MessageDAO.class
 studentApplication\servlets\HomeServlet.class
 studentApplication\servlets\RegisterServlet.class
